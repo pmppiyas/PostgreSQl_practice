@@ -34,7 +34,7 @@ SELECT * FROM students WHERE country = 'Bangladesh';
 
 SELECT blood_group FROM students WHERE blood_group = 'B+';
 
--- <> is not sign || without !
+-- <> or NOT is not sign || without !
 SELECT * FROM students WHERE country <> 'India';
 
 SELECT *
@@ -91,6 +91,8 @@ SELECT count(email) AS total_email
 FROM students
 WHERE
     country = 'USA' OR country = 'Australia';
+
+
 
 INSERT INTO
     students (
