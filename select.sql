@@ -64,6 +64,34 @@ WHERE (
     AND grade = 'A'
     OR grade = 'A+';
 
+-- Scalar Func
+SELECT upper(first_name) from students;
+
+SELECT lower(country) FROM students;
+
+SELECT concat(first_name, ' ', last_name) FROM students;
+
+SELECT length(last_name) FROM students;
+
+-- Aggregate Func
+
+SELECT * FROM students;
+
+SELECT avg(age) AS avarage FROM students;
+
+SELECT max(age) AS maximum FROM students;
+
+SELECT min(age) AS minimum FROM students;
+
+SELECT sum(age) FROM students;
+
+SELECT count(age) AS how_many_i_have FROM students;
+
+SELECT count(email) AS total_email
+FROM students
+WHERE
+    country = 'USA' OR country = 'Australia';
+
 INSERT INTO
     students (
         first_name,
