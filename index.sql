@@ -17,8 +17,12 @@ ALTER TABLE mobile RENAME COLUMN name to mobile_name;
 -- change type of column
 ALTER TABLE mobile ALTER COLUMN mobile_name TYPE VARCHAR(50);
 
--- change constrant of column
+-- change constraint of column
 ALTER TABLE mobile ALTER COLUMN price SET NOT NULL;
 
--- delate constrant of column
+-- delate constraint of column
 ALTER TABLE mobile ALTER COLUMN price DROP NOT NULL;
+
+
+-- Add Constraint
+ALTER TABLE mobile ADD CONSTRAINT unique_mobile_price UNIQUE (price);
