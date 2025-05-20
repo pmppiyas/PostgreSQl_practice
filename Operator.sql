@@ -82,3 +82,10 @@ SET
     age = 18
 WHERE
     student_id = 10;
+
+UPDATE students SET dob = '1999-12-08' WHERE student_id = 13;
+
+SELECT * FROM students WHERE student_id = 13;
+
+
+
